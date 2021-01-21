@@ -10,8 +10,8 @@ start: ## Start server
 	$(DOCKER_COMPOSE) exec app php artisan key:generate
 
 stop: ## Stop and remove a running container
-	docker stop $(APP_NAME); docker rm $(APP_NAME)
-	docker stop $(DB_NAME); docker rm $(DB_NAME)
-	docker stop $(NGINX_NAME); docker rm $(NGINX_NAME)
+	docker rm -f $(APP_NAME)
+	docker rm -f $(DB_NAME)
+	docker rm -f $(NGINX_NAME)
 
 
