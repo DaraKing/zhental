@@ -1,7 +1,7 @@
 DOCKER_COMPOSE=docker-compose
 APP_NAME=zhental-app
 NGINX_NAME=zhental-nginx
-DB_NAME=zhental-nginx
+DB_NAME=zhental-db
 
 start: ## Start server
 	$(DOCKER_COMPOSE) build app
