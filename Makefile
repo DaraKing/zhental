@@ -14,4 +14,5 @@ stop: ## Stop and remove a running container
 	docker rm -f $(DB_NAME)
 	docker rm -f $(NGINX_NAME)
 
-
+$(APP_NAME): ## Enter to Zhental app container
+	docker exec -it $(APP_NAME) bash
